@@ -1,0 +1,427 @@
+/*
+Theme Name: Tamakagi
+Theme URI: http://koyama.me/
+Author: Tomoyuki Koyama
+Description: the TAMAKAGI theme.
+Version: 1.0
+License: MIT
+License URI: https://github.com/tomoyk/tamakagi/blob/master/LICENSE
+*/
+
+/* Main */
+html, body {
+  margin: 0;
+  padding: 0;
+  display: block;
+  min-width: 320px;
+  width: 100%;
+  background: #f3f3fa;
+  font-size: 18px;
+}
+div#container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+/* Left Area */
+div#container > div#side-left {
+  width: 30%;
+  float: left;
+}
+div#container > div#side-left > input.actionItems {
+  display: none;
+}
+div#container > div#side-left > div.container {
+  overflow: hidden;
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: solid 1px #dbdbdb;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px #aaa;
+  border-top: solid 5px #4e55b1;
+}
+div#container > div#side-left > div.wide-container {
+  padding-right: 0;
+  padding-left: 0;
+}
+div#container > div#side-left > div.title > label.btn {
+  display: none;
+}
+div#container > div#side-left > div.container > h1 {
+  font-size: 28px;
+  margin: 0;
+}
+div#container > div#side-left > div.container > h1 > a {
+  text-decoration: none;
+  color: #111;
+}
+div#container > div#side-left > div.container > h1 > a:hover {
+  color: #666bbb;
+}
+div#container > div#side-left > div.container > p {
+  font-size: 15px;
+  color: #999;
+  margin: 0;
+}
+div#container > div#side-left > div.container > div ul.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+div#container > div#side-left > div.container > div > ul.menu {
+  border-top: solid 1px #ccc;
+}
+div#container > div#side-left > div.container > div > ul.menu > li:nth-child(odd){
+  background: #fff;
+}
+div#container > div#side-left > div.container > div > ul.menu > li:nth-child(even){
+  background: #f3f5ff;
+}
+div#container > div#side-left > div.container > div  ul.menu > li > a {
+  display: block;
+  padding: 15px 10px;
+  color: #2a2d5e;
+  text-decoration: none;
+  margin: 0;
+  border-bottom: solid 1px #ccc;
+}
+div#container > div#side-left > div.container > div ul.menu > li > a:hover {
+  background: #99a0d0;
+  color: #fff;
+}
+/*div#container > div#side-left > div.container > div ul.menu > li.selected > a {
+  background: #4e55b1;
+  color: #fff;
+}*/
+div#container > div#side-left > div.search > form > div > label {
+  display: none;
+}
+div#container > div#side-left > div.search > form > div > input[type="text"] {
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  line-height: 2.2;
+  max-width: 230px;
+}
+div#container > div#side-left > div.search > form > div > input[type="submit"] {
+  border-radius: 5px;
+	background: #666bbb;
+	color: #fff;
+	line-height: 2.2;
+	padding: 1px 15px;
+	border: solid 1px #ccc;
+  cursor: pointer;
+}
+
+/* Right Area */
+div#container > div#side-right {
+  width: 70%;
+  float: right;
+}
+div#container > div#side-right > div.container {
+  overflow: hidden;
+  background: #fff;
+  padding: 20px 30px 0;
+  margin: 0;
+  margin-left: 15px;
+  border: solid 1px #dbdbdb;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px #aaa;
+  border-top: solid 5px #4e55b1;
+}
+div#container > div#side-right > div.container > ul.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+div#container > div#side-right > div.container > ul.menu > li {
+  display: inline-block;
+}
+div#container > div#side-right > div.container > ul.menu > li > a {
+  border: solid 1px #acafda;
+  display: block;
+  padding: 5px 10px;
+  background: #e9eafb;
+  color: #2a2d5e;
+  text-decoration: none;
+  margin: 0 5px 5px 0;
+  line-height: 1.8;
+}
+
+/* Post Header */
+div#container > div#side-right > div.container > div#postHeader {
+  overflow: hidden;
+  color: #333;
+}
+div#container > div#side-right > div.container > div#postHeader > h2#title {
+  margin: 0;
+  padding: 10px 5px 3px;
+  border-bottom: solid 1px silver;
+  color: #2f336a;
+}
+div#container > div#side-right > div.container > div#postHeader > ul#postInfo {
+  list-style: none;
+  margin: 0;
+  padding: 5px 5px 10px;
+}
+div#container > div#side-right > div.container > div#postHeader > ul#postInfo > li {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 16px;
+}
+div#container > div#side-right > div.container > div#postHeader > ul#postInfo > li > span {
+  font-size: 16px;:
+}
+
+/* Post Content */
+div#container > div#side-right > div.container > div#postContent {
+  overflow: hidden;
+  line-height: 1.5;
+}
+div#container > div#side-right > div.container > div#postContent > ul.updateList {
+	line-height: 2.0;
+	padding: 0 15px;
+	margin: 0 0 20px;
+}
+div#container > div#side-right > div.container > div#postContent > ul.updateList > li {
+  list-style: none;
+  border-bottom: dashed 1px #555;
+  padding-left: 110px;
+}
+div#container > div#side-right > div.container > div#postContent > ul.updateList > li > span {
+  width: 120px;
+  margin-left: -110px;
+  display: inline-block;
+}
+div#container > div#side-right > div.container > div#postContent > ul.menu {
+  list-style: none;
+  padding: 0;
+}
+div#container > div#side-right > div.container > div#postContent > ul.menu > li {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+div#container > div#side-right > div.container > div#postContent > ul.menu > li > a {
+  display: block;
+  padding: 5px 10px;
+  background: #e9eafb;
+  color: #333;
+  text-decoration: none;
+  margin: 5px;
+  min-height: 135px;
+  border: solid 1px #a894b1;
+  border: solid 1px #acafda;
+}
+div#container > div#side-right > div.container > div#postContent > ul.menu > li > a:hover {
+  background: #dadcfd;
+}
+div#container > div#side-right > div.container > div#postContent > ul.menu > li > a > span {
+  border-bottom: solid 1px #2a2d5e;
+  display: block;
+  padding: 4px 0;
+  font-size: 20px;
+  color: #2a2d5e;
+}
+div#container > div#side-right > div.container > div#postContent > ul.menu > li > a > div {
+  font-size: 16px;
+  margin: 10px 0;
+}
+div#container > div#side-right > div.container > div#postContent  ul.link {
+  list-style: none;
+  padding: 0;
+}
+div#container > div#side-right > div.container > div#postContent  ul.link > li > a {
+  text-decoration: none;
+  color: #37135c;
+  display: block;
+  background: #eceeff;
+  padding: 10px;
+  margin: 10px 20px;
+  border: solid 1px #b8bbe0;
+}
+div#container > div#side-right > div.container > div#postContent  ul.link > li > a:hover {
+  background: #d5d9fd;
+}
+div#container > div#side-right > div.container > div#postContent > ul.sitemap {
+  list-style: none;
+  padding: 0;
+}
+div#container > div#side-right > div.container > div#postContent > ul.sitemap  ul {
+  padding: 0 0 0 30px;
+}
+div#container > div#side-right > div.container > div#postContent > ul.sitemap  > li > a {
+  text-decoration: none;
+  color: #37135c;
+  display: block;
+  background: #eceeff;
+  padding: 3px 5px;
+  margin: 10px 0;
+  border: solid 1px #b8bbe0;
+  line-height: 2.0;
+}
+div#container > div#side-right > div.container > div#postContent  > ul.sitemap  > li > a:hover {
+  background: #d5d9fd;
+}
+div#container > div#side-right > div.container > div#postContent  h3 {
+	border-bottom: solid 1px #4e55b1;
+	border-left: solid 4px #4e55b1;
+	padding-left: 5px;
+	margin: 15px 0 10px;
+}
+div#container > div#side-right > div.container > div#postContent  table {
+  border-collapse: collapse;
+  min-width: 600px;
+}
+div#container > div#side-right > div.container > div#postContent  table  tr {
+  line-height: 2.0;
+}
+div#container > div#side-right > div.container > div#postContent  table  tr > th {
+  background: #d0d1ea;
+}
+div#container > div#side-right > div.container > div#postContent  table  tr > td {
+  border-bottom: solid 1px silver;
+}
+div#container > div#side-right > div.container > div#postFooter {
+  margin: 30px 0 15px;
+  border-top: solid 1px silver;
+  padding: 10px 0 0;
+}
+div#container > div#side-right > div.container > div#postFooter > p {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+}
+
+/* Clear Float */
+div#container > br#floatReset {
+  float: none;
+  clear: both;
+}
+
+/* Mobile Layout */
+@media screen and (max-width:900px) {
+  html,body {
+    font-size: 16px;
+  }
+  div#container {
+    margin: 0;
+  }
+  div#container > div#side-left {
+    width: 100%;
+    float: none;
+  }
+  div#container > div#side-left > div.title > label.btn {
+    display: block;
+    cursor: pointer;
+    background: #f3f5ff;
+    padding: 10px 0;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: #4e55b1;
+    border-radius: 5px;
+    border: solid 1px #4e55b1;
+  }
+  div#container > div#side-left > div.menu {
+    display: none;
+    margin-bottom: 0;
+    border-bottom: none;
+    box-shadow: none;
+    z-index: 20;
+    position: relative;
+    text-align: center;
+  }
+  div#container > div#side-left > div.search {
+    display: none;
+    border-top: none;
+    z-index: 5;
+    position: relative;
+    text-align: center;
+  }
+  div#container > div#side-left > input#menuStatus:checked ~ div.menu,
+  div#container > div#side-left > input#menuStatus:checked ~ div.search {
+    display: block;
+  }
+  div#container > div#side-left > div.container > div  ul.menu {
+    border-bottom: solid 1px #ccc;
+  }
+  div#container > div#side-left > div.container > div  ul.menu > li {
+    display: inline-block;
+  }
+  div#container > div#side-left > div.container > div  ul.menu > li > a {
+    border-bottom: none;
+  }
+  div#container > div#side-left > div.container > div > ul.menu > li:nth-child(even),
+  div#container > div#side-left > div.container > div > ul.menu > li:nth-child(odd) {
+    background: #fff;
+  }
+  div#container > div#side-left > div.container > div > ul.mainNav > li  ul.menu {
+    display: none;
+  }
+  div#container > div#side-right {
+    width: 100%;
+    float: none;
+  }
+  div#container > div#side-right > div.container {
+    margin: 0;
+    padding: 0 10px;
+  }
+  div#container > div#side-right > div.container > ul.menu {
+    display: block;
+    margin: 10px 0;
+    Overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  div#container > div#side-right > div.container > ul.menu > li {
+    display: table-cell;
+    table-layout: fixed;
+    white-space: nowrap;
+  }
+}
+@media screen and (max-width:630px) {
+  div#container > div#side-left > div.menu {
+    text-align: left;
+  }
+  div#container > div#side-left > div.container > h1 > a {
+    font-size: 25px;
+  }
+  div#container > div#side-left > div.container > div  ul.menu {
+    border-bottom: none;
+  }
+  div#container > div#side-left > div.container > div  ul.menu > li {
+    width: 50%;
+    display: inline-block;
+  }
+  div#container > div#side-left > div.container > div  ul.menu > li > a {
+    border-bottom: solid 1px #ccc;
+  }
+  div#container > div#side-right > div.container > ul.menu > li > a > span {
+    font-size: 14px;
+  }
+  div#container > div#side-right > div.container > div#postContent {
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  div#container > div#side-right > div.container > div#postContent > ul.updateList {
+    padding: 0;
+  }
+  div#container > div#side-right > div.container > div#postContent > ul.updateList > li > span {
+    width: 110px;
+  }
+  div#container > div#side-right > div.container > div#postContent > ul.menu > li {
+    width: 100%;
+  }
+  div#container > div#side-right > div.container > div#postContent > ul.menu > li > a {
+    min-height: 10px;
+  }
+  div#container > div#side-right > div.container > div#postContent > ul.menu > li > a > div {
+    display: none;
+  }
+  div#container > div#side-right > div.container > div#postContent > ul.menu > li > a > span {
+    border-bottom: none;
+    font-size: 18px;
+  }
+}
