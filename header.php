@@ -24,6 +24,7 @@
     <div class="container search">
       <?php get_search_form(); ?>
     </div>
+    <?php dynamic_sidebar('site_left'); ?>
   </div><!-- #side-left -->
   <div id="side-right">
     <div class="container">
