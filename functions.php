@@ -9,7 +9,7 @@ function left_widgets_init() {
     'id' => 'site_left',
     'before_widget' => '<div class="container widget">',
     'after_widget' => '</div>',
-    'before_title' => '<h4>',
+    'before_title' => '<h4 class="widgetTitle">',
     'after_title' => '</h4>',
   ));
 }

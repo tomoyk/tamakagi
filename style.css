@@ -8,7 +8,9 @@ License: MIT
 License URI: https://github.com/tomoyk/tamakagi/blob/master/LICENSE
 */
 
-/* Main */
+/*
+ * Main Area
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 html, body {
   margin: 0;
   padding: 0;
@@ -24,7 +26,9 @@ div#container {
   margin: 30px auto;
 }
 
-/* Left Area */
+/*
+ * Left Area
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 div#container > div#side-left {
   width: 30%;
   float: left;
@@ -123,7 +127,9 @@ div#container > div#side-left > div.search > form > div > input[type="submit"] {
   cursor: pointer;
 }
 
-/* Right Area */
+/*
+ * Right Area
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 div#container > div#side-right {
   width: 70%;
   float: right;
@@ -159,7 +165,17 @@ div#container > div#side-right > div.container > ul.menu > li > a {
   line-height: 1.8;
 }
 
-/* Post Header */
+/*
+ * Left Area [Widget]
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+div#container > div#side-left > div.widget > h4.widgetTitle {
+  margin: 0 0 10px;
+  padding: 10px 0;
+}
+
+/*
+ * Left Area [Post Header]
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 div#container > div#side-right > div.container > div#postHeader {
   overflow: hidden;
   color: #333;
@@ -180,11 +196,10 @@ div#container > div#side-right > div.container > div#postHeader > ul#postInfo > 
   margin-right: 20px;
   font-size: 16px;
 }
-div#container > div#side-right > div.container > div#postHeader > ul#postInfo > li > span {
-  font-size: 16px;:
-}
 
-/* Post Content */
+/*
+ * Left Area [Post Content]
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 div#container > div#side-right > div.container > div#postContent {
   overflow: hidden;
   line-height: 1.5;
@@ -238,11 +253,11 @@ div#container > div#side-right > div.container > div#postContent > ul.menu > li 
   font-size: 16px;
   margin: 10px 0;
 }
-div#container > div#side-right > div.container > div#postContent  ul.link {
+div#container > div#side-right > div.container > div#postContent ul.link {
   list-style: none;
   padding: 0;
 }
-div#container > div#side-right > div.container > div#postContent  ul.link > li > a {
+div#container > div#side-right > div.container > div#postContent ul.link > li > a {
   text-decoration: none;
   color: #37135c;
   display: block;
@@ -251,7 +266,7 @@ div#container > div#side-right > div.container > div#postContent  ul.link > li >
   margin: 10px 20px;
   border: solid 1px #b8bbe0;
 }
-div#container > div#side-right > div.container > div#postContent  ul.link > li > a:hover {
+div#container > div#side-right > div.container > div#postContent ul.link > li > a:hover {
   background: #d5d9fd;
 }
 div#container > div#side-right > div.container > div#postContent > ul.sitemap {
@@ -304,13 +319,17 @@ div#container > div#side-right > div.container > div#postFooter > p {
   margin: 0;
 }
 
-/* Clear Float */
+/*
+ * Clear Float
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 div#container > br#floatReset {
   float: none;
   clear: both;
 }
 
-/* Mobile Layout */
+/*
+ * Tablet Layout
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 @media screen and (max-width:900px) {
   html,body {
     font-size: 16px;
@@ -390,6 +409,10 @@ div#container > br#floatReset {
     white-space: nowrap;
   }
 }
+
+/*
+ * Mobile Area
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 @media screen and (max-width:630px) {
   div#container > div#side-left > div.menu {
     text-align: left;
