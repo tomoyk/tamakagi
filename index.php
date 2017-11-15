@@ -2,7 +2,10 @@
 
 <?php if(is_home() || is_archive() || is_search()): /* HOME or ARCHIVE or SEARCH */ ?>
 
-      <h2 id="postTitle"><?php echo getPageType(); ?>: <?php echo getPageText(); ?></h2>
+      <?php if(!is_home()): ?>
+      <h2 id="postTitle"><?php the_archive_title(); ?></h2>
+      <?php endif; ?>
+
       <?php if(have_posts()): while (have_posts()): the_post(); ?>
       <div id="postHeader">
         <h3 class="postTitle"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
