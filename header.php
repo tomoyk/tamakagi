@@ -10,6 +10,12 @@
   <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>">
 </head>
 <body>
+<?php if(is_admin_bar_showing()): ?>
+<style>div#container {
+  margin-top: 60px;
+}
+</style>
+<?php endif; ?>
 <div id="container">
   <div id="side-left">
     <input type="checkbox" id="menuStatus" class="actionItems">
@@ -19,7 +25,27 @@
       <label for="menuStatus" class="btn">メニュー</label>
     </div>
     <div class="container menu">
-      <?php wp_nav_menu(); ?>
+      <?php
+      $argv = array(
+        'menu'            => '',
+        'menu_class'      => 'menu',
+        'menu_id'         => 'menu-1',
+        'container'       => 'div',
+        'container_class' => 'menu-container',
+        'container_id'    => '',
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'echo'            => true,
+        'depth'           => 2,
+        'walker'          => '',
+        'theme_location'  => '',
+        'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+      );
+      wp_nav_menu($argv);
+      ?>
     </div>
     <div class="container search">
       <?php get_search_form(); ?>

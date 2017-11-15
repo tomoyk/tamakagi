@@ -65,21 +65,15 @@ div#container > div#side-left > div.container > p {
   color: #999;
   margin: 0;
 }
-div#container > div#side-left > div.container > div ul.menu {
+div#container > div#side-left > div.container > div.menu-container ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-div#container > div#side-left > div.container > div > ul.menu {
+div#container > div#side-left > div.container > div.menu-container ul {
   border-top: solid 1px #ccc;
 }
-div#container > div#side-left > div.container > div > ul.menu > li:nth-child(odd){
-  background: #fff;
-}
-div#container > div#side-left > div.container > div > ul.menu > li:nth-child(even){
-  background: #f3f5ff;
-}
-div#container > div#side-left > div.container > div  ul.menu > li > a {
+div#container > div#side-left > div.container > div.menu-container ul > li > a {
   display: block;
   padding: 15px 10px;
   color: #2a2d5e;
@@ -87,14 +81,29 @@ div#container > div#side-left > div.container > div  ul.menu > li > a {
   margin: 0;
   border-bottom: solid 1px #ccc;
 }
-div#container > div#side-left > div.container > div ul.menu > li > a:hover {
+div#container > div#side-left > div.container > div.menu-container ul > li > a:hover {
   background: #99a0d0;
   color: #fff;
 }
-/*div#container > div#side-left > div.container > div ul.menu > li.selected > a {
+div#container > div#side-left > div.container > div.menu-container ul.menu > li.current-menu-item > a,
+div#container > div#side-left > div.container > div.menu-container ul.menu > li.current-menu-parent > a {
   background: #4e55b1;
   color: #fff;
-}*/
+}
+div#container > div#side-left > div.container > div.menu-container ul.menu > li:nth-child(odd){
+  background: #fff;
+}
+div#container > div#side-left > div.container > div.menu-container ul.menu > li:nth-child(even){
+  background: #f3f5ff;
+}
+div#container > div#side-left > div.container > div.menu-container ul.sub-menu {
+  margin-left: 20px;
+  border-top: none;
+}
+div#container > div#side-left > div.container > div.menu-container ul.sub-menu > li > a {
+  padding: 10px 10px;
+  font-size: 16px;
+}
 div#container > div#side-left > div.search > form > div > label {
   display: none;
 }

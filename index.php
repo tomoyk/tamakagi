@@ -40,15 +40,15 @@
       <div id="postContent">
           <?php the_content(); ?>
           <?php
-            $argv = array(
-              'before' => '<p class="nextPage">',
-              'after' => '</p>',
-              'next_or_number' => 'next',
-              'nextpagelink' => '次のページ',
-              'previouspagelink' => '前のページ',
-              'pagelink' => 'ページ: %'
-            );
-            wp_link_pages();
+          $argv = array(
+            'before' => '<p class="nextPage">',
+            'after' => '</p>',
+            'next_or_number' => 'next',
+            'nextpagelink' => '次のページ',
+            'previouspagelink' => '前のページ',
+            'pagelink' => 'ページ: %'
+          );
+          wp_link_pages();
           ?>
       </div><!-- #postContent -->
       <?php endwhile; endif; ?>
