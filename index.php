@@ -32,8 +32,12 @@
         <ul id="postInfo">
           <li>更新日:<span><?php the_time('Y年n月j日'); ?></span></li>
           <li>作者:<span><?php the_author_posts_link(); ?></span></li>
+
+          <?php if(!is_attachment()): ?>
           <li>カテゴリ:<span><?php the_category(', '); ?></span></li>
           <li>タグ:<span><?php the_tags(', '); ?></span></li>
+          <?php endif; ?>
+
         </ul>
         <?php endif; ?>
 
@@ -49,7 +53,7 @@
             'previouspagelink' => '前のページ',
             'pagelink' => 'ページ: %'
           );
-          wp_link_pages();
+          wp_link_pages($argv);
           ?>
       </div><!-- #postContent -->
       <?php endwhile; endif; ?>
