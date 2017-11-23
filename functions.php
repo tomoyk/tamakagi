@@ -16,43 +16,35 @@ function left_widgets_init() {
 add_action( 'widgets_init', 'left_widgets_init' );
 
 /*
- * Add theme-customizer
+ * Enbale short-tag
  * * * * * * * * * * * * * * * * * * * * * * */
-function theme_customizer_register($wp_customize){
+function get_child_list($argv) {
+  $page_id = $wp_query->post->ID;
+  // wp_list_pages('title_li=&child_of='.$id);
 
-	$wp_customize->add_section('tamakagi_theme_scheme', array(
-		'title' => '項目名',
-		'priority' => 200,
-	));
+  /*
+  $params = array(
+    'sort_order' => 'ASC',
+    'sort_column' => 'post_title',
+    'hierarchical' => 1,
+    'child_of' => $page_id,
+    'parent' => 0,
+  );
+  */
 
-	$wp_customize->add_setting('tamakagi_theme_option_text', array(
-		'default' => '',
-		'type'    => 'option',
-		'transport'=> 'refresh',
-	));
+  // return var_dump(get_pages($params));
 
-	$wp_customize->add_control('tamakagi_theme_origin_text', array(
-		'settings' => 'tamakagi_theme_option_text',
-		'label'    => 'テキスト入力',
-		'section'  => 'tamakagi_theme_scheme',
-		'type'     => 'text',
-	));
+  // get new objects
+  $my_wp_query = new WP_Query();
+  $all_wp_pages = $my_wp_query->query( array(
+      'post_type' => 'page',
+      'nopaging'  => 'true'
+  ));
 
+  return get_page_children($page_id, $all_wp_pages);
+
+  // return 'this is child_list';
 }
-add_action('cutomize_register', theme_customizer_register);
-
-function themeCustom(){
-	?>
-
-	<style type="text/css">
-		h1{
-			color: red;
-		}
-	</style>
-
-	<?php
-}
-add_action('wp_head', 'themeCustom');
-
+add_shortcode('child_list', 'get_child_list');
 
 ?>
