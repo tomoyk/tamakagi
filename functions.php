@@ -19,8 +19,12 @@ add_action( 'widgets_init', 'left_widgets_init' );
  * Enbale short-tag
  * * * * * * * * * * * * * * * * * * * * * * */
 function get_child_list($argv) {
-  $page_id = $wp_query->post->ID;
-  // wp_list_pages('title_li=&child_of='.$id);
+
+  // if(is_page)
+  // elseif(is_post)
+
+  // $my_wp_query = new WP_Query();
+  // $all_wp_pages = $my_wp_query->query(array('post_type' => 'page'));
 
   /*
   $params = array(
@@ -32,18 +36,7 @@ function get_child_list($argv) {
   );
   */
 
-  // return var_dump(get_pages($params));
-
-  // get new objects
-  $my_wp_query = new WP_Query();
-  $all_wp_pages = $my_wp_query->query( array(
-      'post_type' => 'page',
-      'nopaging'  => 'true'
-  ));
-
-  return get_page_children($page_id, $all_wp_pages);
-
-  // return 'this is child_list';
+  return var_dump(get_page_children(the_id(), $all_wp_pages));
 }
 add_shortcode('child_list', 'get_child_list');
 

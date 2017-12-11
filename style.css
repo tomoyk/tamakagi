@@ -223,35 +223,42 @@ div#container > div#side-right > div.container > div#postHeader > ul#postInfo > 
 /*
  * Right Area [Post Content]
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-div#container > div#side-right > div.container {
+div#container > div#side-right > div.container > div#postContent {
   overflow: hidden;
   line-height: 1.5;
 }
-div#container > div#side-right > div.container > ul.updateList {
+div#container > div#side-right > div.container > div#postContent > ul.updateList {
 	line-height: 2.0;
 	padding: 0 15px;
 	margin: 0 0 20px;
 }
-div#container > div#side-right > div.container > ul.updateList > li {
+div#container > div#side-right > div.container > div#postContent > ul.updateList > li {
   list-style: none;
   border-bottom: dashed 1px #555;
   padding-left: 110px;
 }
-div#container > div#side-right > div.container > ul.updateList > li > span {
+div#container > div#side-right > div.container > div#postContent > ul.updateList > li > span {
   width: 120px;
   margin-left: -110px;
   display: inline-block;
 }
-div#container > div#side-right > div.container > ul.menu {
+div#container > div#side-right > div.container > div#postContent > ul.childList {
   list-style: none;
   padding: 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
-div#container > div#side-right > div.container > ul.menu > li {
-  display: inline-block;
+div#container > div#side-right > div.container > div#postContent > ul.childList > li {
+  display: block;
   width: 50%;
   vertical-align: top;
 }
-div#container > div#side-right > div.container > ul.menu > li > a {
+div#container > div#side-right > div.container > div#postContent > ul.childList > li > a {
   display: block;
   padding: 5px 10px;
   background: #e9eafb;
@@ -262,25 +269,18 @@ div#container > div#side-right > div.container > ul.menu > li > a {
   border: solid 1px #a894b1;
   border: solid 1px #acafda;
 }
-div#container > div#side-right > div.container > ul.menu > li > a:hover {
+div#container > div#side-right > div.container > div#postContent > ul.childList > li > a:hover {
   background: #dadcfd;
 }
-div#container > div#side-right > div.container > ul.menu > li > a > span {
-  border-bottom: solid 1px #2a2d5e;
-  display: block;
-  padding: 4px 0;
-  font-size: 20px;
-  color: #2a2d5e;
-}
-div#container > div#side-right > div.container > ul.menu > li > a > div {
+div#container > div#side-right > div.container > div#postContent > ul.childList > li > a > div {
   font-size: 16px;
   margin: 10px 0;
 }
-div#container > div#side-right > div.container > ul.link {
+div#container > div#side-right > div.container > div#postContent > ul.link {
   list-style: none;
   padding: 0;
 }
-div#container > div#side-right > div.container > ul.link > li > a {
+div#container > div#side-right > div.container > div#postContent > ul.link > li > a {
   text-decoration: none;
   color: #37135c;
   display: block;
@@ -289,17 +289,17 @@ div#container > div#side-right > div.container > ul.link > li > a {
   margin: 10px 20px;
   border: solid 1px #b8bbe0;
 }
-div#container > div#side-right > div.container > ul.link > li > a:hover {
+div#container > div#side-right > div.container > div#postContent > ul.link > li > a:hover {
   background: #d5d9fd;
 }
-div#container > div#side-right > div.container > ul.sitemap {
+div#container > div#side-right > div.container > div#postContent > ul.sitemap {
   list-style: none;
   padding: 0;
 }
-div#container > div#side-right > div.container > ul.sitemap  ul {
+div#container > div#side-right > div.container > div#postContent > ul.sitemap ul {
   padding: 0 0 0 30px;
 }
-div#container > div#side-right > div.container > ul.sitemap  > li > a {
+div#container > div#side-right > div.container > div#postContent > ul.sitemap > li > a {
   text-decoration: none;
   color: #37135c;
   display: block;
@@ -309,34 +309,34 @@ div#container > div#side-right > div.container > ul.sitemap  > li > a {
   border: solid 1px #b8bbe0;
   line-height: 2.0;
 }
-div#container > div#side-right > div.container >  ul.sitemap  > li > a:hover {
+div#container > div#side-right > div.container > div#postContent > ul.sitemap > li > a:hover {
   background: #d5d9fd;
 }
-div#container > div#side-right > div.container > h3 {
+div#container > div#side-right > div.container > div#postContent h3 {
 	border-bottom: solid 1px #4e55b1;
 	border-left: solid 4px #4e55b1;
 	padding-left: 5px;
 	margin: 15px 0 10px;
 }
-div#container > div#side-right > div.container > table {
+div#container > div#side-right > div.container > div#postContent table {
   border-collapse: collapse;
   min-width: 600px;
 }
-div#container > div#side-right > div.container > table tr {
+div#container > div#side-right > div.container > div#postContent table tr {
   line-height: 2.0;
 }
-div#container > div#side-right > div.container > table tr > th {
+div#container > div#side-right > div.container > div#postContent table tr > th {
   background: #d0d1ea;
 }
-div#container > div#side-right > div.container > table tr > td {
+div#container > div#side-right > div.container > div#postContent table tr > td {
   border-bottom: solid 1px silver;
 }
-div#container > div#side-right > div.container > div#postFooter {
+div#container > div#side-right > div.container > div#postContent div#postFooter {
   margin: 30px 0 15px;
   border-top: solid 1px silver;
   padding: 10px 0 0;
 }
-div#container > div#side-right > div.container > div#postFooter > p {
+div#container > div#side-right > div.container > div#postContent > div#postFooter > p {
   font-size: 16px;
   color: #555;
   margin: 0;
