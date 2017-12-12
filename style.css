@@ -251,12 +251,13 @@ div#container > div#side-right > div.container > div#postContent > ul.childList 
   display: -o-flex;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 div#container > div#side-right > div.container > div#postContent > ul.childList > li {
-  display: block;
   width: 50%;
-  vertical-align: top;
+  margin: 0 0 10px;
+  min-height: 150px;
 }
 div#container > div#side-right > div.container > div#postContent > ul.childList > li > a {
   display: block;
@@ -264,13 +265,20 @@ div#container > div#side-right > div.container > div#postContent > ul.childList 
   background: #e9eafb;
   color: #333;
   text-decoration: none;
-  margin: 5px;
-  min-height: 135px;
-  border: solid 1px #a894b1;
+  margin: 0 5px;
   border: solid 1px #acafda;
+  height: 100%;
+  box-sizing: border-box;
 }
 div#container > div#side-right > div.container > div#postContent > ul.childList > li > a:hover {
   background: #dadcfd;
+}
+div#container > div#side-right > div.container > div#postContent > ul.childList > li > a > span {
+  border-bottom: solid 1px #2a2d5e;
+  display: block;
+  padding: 4px 0;
+  font-size: 20px;
+  color: #2a2d5e;
 }
 div#container > div#side-right > div.container > div#postContent > ul.childList > li > a > div {
   font-size: 16px;
