@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Enbale widget
+ * Enable widget
  * * * * * * * * * * * * * * * * * * * * * * */
 function left_widgets_init() {
   register_sidebar(array(
@@ -16,28 +16,63 @@ function left_widgets_init() {
 add_action( 'widgets_init', 'left_widgets_init' );
 
 /*
- * Enbale short-tag
+ * Enable short-tag
  * * * * * * * * * * * * * * * * * * * * * * */
 function get_child_list($argv) {
 
-  // if(is_page)
-  // elseif(is_post)
+  // Check page
+  if(!is_page()) {
+    return "Error: Not supported type(only page).";
+  }
 
-  // $my_wp_query = new WP_Query();
-  // $all_wp_pages = $my_wp_query->query(array('post_type' => 'page'));
+  // Create query
+  $my_wp_query = new WP_Query();
+  $all_wp_pages = $my_wp_query->query(array(
+    'post_type' => 'page',
+    'nopaging'  => 'true'
+  ));
 
-  /*
-  $params = array(
-    'sort_order' => 'ASC',
-    'sort_column' => 'post_title',
-    'hierarchical' => 1,
-    'child_of' => $page_id,
-    'parent' => 0,
-  );
-  */
+  // Getting array of child-page
+  $child_pages = get_page_children( get_the_ID(), $all_wp_pages );
 
-  return var_dump(get_page_children(the_id(), $all_wp_pages));
-}
+  // Not found child-pages
+  if(count($child_pages)<1){
+    return;
+  }
+
+  // Debug::
+  // echo "<pre>".var_dump($child_pages)."</pre>";
+
+  // Build list-html
+  $child_pages_html = '<ul class="childList">';
+
+  foreach($child_pages as $child_page){
+
+    // Getting data of child-page
+    $child_page_id = $child_page->ID;
+    $child_page_data = get_page($child_page_id);
+    $child_page_title = $child_page_data->post_title;
+    $child_page_raw_content = $child_page_data->post_content;
+
+    // Modified HTML(remove html-tag and get substring of 55 characters)
+    $child_page_content = mb_substr(wp_strip_all_tags($child_page_raw_content, true), 0, 55);
+    $child_page_url = $child_page_data->guid;
+
+    // Build list-html
+    $child_pages_html .= <<< EOF
+      <li><a href="$child_page_url">
+        <span>$child_page_title</span>
+        <div>$child_page_content</div>
+      </a></li>
+EOF;
+
+  } // end of foreach
+
+  // Callback list-html
+  return "$child_pages_html</ul>";
+
+} // end of get_child_list()
+
 add_shortcode('child_list', 'get_child_list');
 
 ?>
