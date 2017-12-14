@@ -22,7 +22,7 @@ function get_child_list($argv) {
 
   // Check page
   if(!is_page()) {
-    return "Error: Not supported type(only page).";
+    return "エラー: このショートタグは固定ページでのみ動作します。";
   }
 
   // Create query
@@ -50,7 +50,7 @@ function get_child_list($argv) {
 
     // Getting data of child-page
     $child_page_id = $child_page->ID;
-    $child_page_data = get_page($child_page_id);
+    $child_page_data = get_post($child_page_id);
     $child_page_title = $child_page_data->post_title;
     $child_page_raw_content = $child_page_data->post_content;
 

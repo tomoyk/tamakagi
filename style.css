@@ -29,14 +29,14 @@ div#container {
 /*
  * Left Area
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-div#container > div#side-left {
+div#side-left {
   width: 30%;
   float: left;
 }
-div#container > div#side-left > input.actionItems {
+div#side-left > input.actionItems {
   display: none;
 }
-div#container > div#side-left > div.container {
+div#side-left > div.container {
   overflow: hidden;
   background: #fff;
   padding: 15px;
@@ -46,44 +46,44 @@ div#container > div#side-left > div.container {
   box-shadow: 0px 0px 5px #aaa;
   border-top: solid 5px #4e55b1;
 }
-div#container > div#side-left > div.wide-container {
+div#side-left > div.wide-container {
   padding-right: 0;
   padding-left: 0;
 }
 
 /* MENU BUTTON*/
-div#container > div#side-left > div.title > label.btn {
+div#side-left > div.title > label.btn {
   display: none;
 }
 
 /* SITE TITLE */
-div#container > div#side-left > div.container > h1 {
+div#side-left > div.container > h1 {
   font-size: 28px;
   margin: 0;
 }
-div#container > div#side-left > div.container > h1 > a {
+div#side-left > div.container > h1 > a {
   text-decoration: none;
   color: #111;
 }
-div#container > div#side-left > div.container > h1 > a:hover {
+div#side-left > div.container > h1 > a:hover {
   color: #666bbb;
 }
 
 /* SITE DESCRIPTION */
-div#container > div#side-left > div.container > p {
+div#side-left > div.container > p {
   font-size: 15px;
   color: #999;
   margin: 0;
 }
 
 /* MENU COMMON */
-div#container > div#side-left > div.container > div.menu-container ul {
+div#side-left > div.container > div.menu-container ul {
   list-style: none;
   padding: 0;
   margin: 0;
   border-top: solid 1px #ccc;
 }
-div#container > div#side-left > div.container > div.menu-container ul > li > a {
+div#side-left > div.container > div.menu-container ul > li > a {
   display: block;
   padding: 15px 10px;
   color: #2a2d5e;
@@ -91,56 +91,56 @@ div#container > div#side-left > div.container > div.menu-container ul > li > a {
   margin: 0;
   border-bottom: solid 1px #ccc;
 }
-div#container > div#side-left > div.container > div.menu-container ul > li > a:hover {
+div#side-left > div.container > div.menu-container ul > li > a:hover {
   background: #99a0d0;
   color: #fff;
 }
 
 /* SELECTED MENU ITEM */
-div#container > div#side-left > div.container > div.menu-container ul.menu > li.current-menu-item > a,
-div#container > div#side-left > div.container > div.menu-container ul.menu > li.current-menu-parent > a {
+div#side-left > div.container > div.menu-container ul.menu > li.current-menu-item > a,
+div#side-left > div.container > div.menu-container ul.menu > li.current-menu-parent > a {
   background: #4e55b1;
   color: #fff;
 }
 
 /* MENU-ITEM COLOR */
-div#container > div#side-left > div.container > div.menu-container ul.menu > li:nth-child(odd){
+div#side-left > div.container > div.menu-container ul.menu > li:nth-child(odd){
   background: #fff;
 }
-div#container > div#side-left > div.container > div.menu-container ul.menu > li:nth-child(even){
+div#side-left > div.container > div.menu-container ul.menu > li:nth-child(even){
   background: #f3f5ff;
 }
 
 /* SUB-MENU COMMON */
-div#container > div#side-left > div.container > div.menu-container ul.sub-menu {
+div#side-left > div.container > div.menu-container ul.sub-menu {
   margin-left: 20px;
   border-top: none;
 }
-div#container > div#side-left > div.container > div.menu-container ul.sub-menu > li > a {
+div#side-left > div.container > div.menu-container ul.sub-menu > li > a {
   padding: 10px 10px;
   font-size: 16px;
 }
 
 /* SUB-MENU CLOSE */
-div#container > div#side-left > div.container > div.menu-container ul.menu > li > ul.sub-menu {
+div#side-left > div.container > div.menu-container ul.menu > li > ul.sub-menu {
   display: none;
 }
 /* SUB-MENU OPEN */
-div#container > div#side-left > div.container > div.menu-container ul.menu > li.current-menu-item > ul.sub-menu,
-div#container > div#side-left > div.container > div.menu-container ul.menu > li.current-menu-parent > ul.sub-menu {
+div#side-left > div.container > div.menu-container ul.menu > li.current-menu-item > ul.sub-menu,
+div#side-left > div.container > div.menu-container ul.menu > li.current-menu-parent > ul.sub-menu {
   display: block;
 }
 
-div#container > div#side-left > div.search > form > div > label {
+div#side-left > div.search > form > div > label {
   display: none;
 }
-div#container > div#side-left > div.search > form > div > input[type="text"] {
+div#side-left > div.search > form > div > input[type="text"] {
   border: solid 1px #ccc;
   border-radius: 5px;
   line-height: 2.2;
   max-width: 230px;
 }
-div#container > div#side-left > div.search > form > div > input[type="submit"] {
+div#side-left > div.search > form > div > input[type="submit"] {
   border-radius: 5px;
 	background: #666bbb;
 	color: #fff;
@@ -153,11 +153,11 @@ div#container > div#side-left > div.search > form > div > input[type="submit"] {
 /*
  * Right Area
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-div#container > div#side-right {
+div#side-right {
   width: 70%;
   float: right;
 }
-div#container > div#side-right > div.container {
+div#side-right > div.container {
   overflow: hidden;
   background: #fff;
   padding: 20px 30px 0;
@@ -168,16 +168,16 @@ div#container > div#side-right > div.container {
   box-shadow: 0px 0px 5px #aaa;
   border-top: solid 5px #4e55b1;
 }
-div#container > div#side-right > div.container > ul.menu {
+div#side-right > div.container > ul.menu {
   list-style: none;
   padding: 0;
   margin: 0;
   display: none;
 }
-div#container > div#side-right > div.container > ul.menu > li {
+div#side-right > div.container > ul.menu > li {
   display: inline-block;
 }
-div#container > div#side-right > div.container > ul.menu > li > a {
+div#side-right > div.container > ul.menu > li > a {
   border: solid 1px #acafda;
   display: block;
   padding: 5px 10px;
@@ -191,7 +191,7 @@ div#container > div#side-right > div.container > ul.menu > li > a {
 /*
  * Left Area [Widget]
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-div#container > div#side-left > div.widget > h4.widgetTitle {
+div#side-left > div.widget > h4.widgetTitle {
   margin: 0 0 10px;
   padding: 10px 0;
 }
@@ -199,22 +199,22 @@ div#container > div#side-left > div.widget > h4.widgetTitle {
 /*
  * Right Area [Post Header]
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-div#container > div#side-right > div.container > div#postHeader {
+div#side-right > div.container > div#postHeader {
   overflow: hidden;
   color: #333;
 }
-div#container > div#side-right > div.container > div#postHeader > h2#title {
+div#side-right > div.container > div#postHeader > h2#title {
   margin: 0;
   padding: 10px 5px 3px;
   border-bottom: solid 1px silver;
   color: #2f336a;
 }
-div#container > div#side-right > div.container > div#postHeader > ul#postInfo {
+div#side-right > div.container > div#postHeader > ul#postInfo {
   list-style: none;
   margin: 0;
   padding: 5px 5px 10px;
 }
-div#container > div#side-right > div.container > div#postHeader > ul#postInfo > li {
+div#side-right > div.container > div#postHeader > ul#postInfo > li {
   display: inline-block;
   margin-right: 20px;
   font-size: 16px;
@@ -223,26 +223,26 @@ div#container > div#side-right > div.container > div#postHeader > ul#postInfo > 
 /*
  * Right Area [Post Content]
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-div#container > div#side-right > div.container > div#postContent {
+div#side-right > div.container > div#postContent {
   overflow: hidden;
   line-height: 1.5;
 }
-div#container > div#side-right > div.container > div#postContent > ul.updateList {
+div#side-right > div.container > div#postContent > ul.updateList {
 	line-height: 2.0;
 	padding: 0 15px;
 	margin: 0 0 20px;
 }
-div#container > div#side-right > div.container > div#postContent > ul.updateList > li {
+div#side-right > div.container > div#postContent > ul.updateList > li {
   list-style: none;
   border-bottom: dashed 1px #555;
   padding-left: 110px;
 }
-div#container > div#side-right > div.container > div#postContent > ul.updateList > li > span {
+div#side-right > div.container > div#postContent > ul.updateList > li > span {
   width: 120px;
   margin-left: -110px;
   display: inline-block;
 }
-div#container > div#side-right > div.container > div#postContent > ul.childList {
+div#side-right > div.container > div#postContent > ul.childList {
   list-style: none;
   padding: 0;
   display: -webkit-flex;
@@ -254,12 +254,12 @@ div#container > div#side-right > div.container > div#postContent > ul.childList 
   justify-content: flex-start;
   align-items: stretch;
 }
-div#container > div#side-right > div.container > div#postContent > ul.childList > li {
+div#side-right > div.container > div#postContent > ul.childList > li {
   width: 50%;
   margin: 0 0 10px;
   min-height: 150px;
 }
-div#container > div#side-right > div.container > div#postContent > ul.childList > li > a {
+div#side-right > div.container > div#postContent > ul.childList > li > a {
   display: block;
   padding: 5px 10px;
   background: #e9eafb;
@@ -270,25 +270,25 @@ div#container > div#side-right > div.container > div#postContent > ul.childList 
   height: 100%;
   box-sizing: border-box;
 }
-div#container > div#side-right > div.container > div#postContent > ul.childList > li > a:hover {
+div#side-right > div.container > div#postContent > ul.childList > li > a:hover {
   background: #dadcfd;
 }
-div#container > div#side-right > div.container > div#postContent > ul.childList > li > a > span {
+div#side-right > div.container > div#postContent > ul.childList > li > a > span {
   border-bottom: solid 1px #2a2d5e;
   display: block;
   padding: 4px 0;
   font-size: 20px;
   color: #2a2d5e;
 }
-div#container > div#side-right > div.container > div#postContent > ul.childList > li > a > div {
+div#side-right > div.container > div#postContent > ul.childList > li > a > div {
   font-size: 16px;
   margin: 10px 0;
 }
-div#container > div#side-right > div.container > div#postContent > ul.link {
+div#side-right > div.container > div#postContent > ul.link {
   list-style: none;
   padding: 0;
 }
-div#container > div#side-right > div.container > div#postContent > ul.link > li > a {
+div#side-right > div.container > div#postContent > ul.link > li > a {
   text-decoration: none;
   color: #37135c;
   display: block;
@@ -297,17 +297,17 @@ div#container > div#side-right > div.container > div#postContent > ul.link > li 
   margin: 10px 20px;
   border: solid 1px #b8bbe0;
 }
-div#container > div#side-right > div.container > div#postContent > ul.link > li > a:hover {
+div#side-right > div.container > div#postContent > ul.link > li > a:hover {
   background: #d5d9fd;
 }
-div#container > div#side-right > div.container > div#postContent > ul.sitemap {
+div#side-right > div.container > div#postContent > ul.sitemap {
   list-style: none;
   padding: 0;
 }
-div#container > div#side-right > div.container > div#postContent > ul.sitemap ul {
+div#side-right > div.container > div#postContent > ul.sitemap ul {
   padding: 0 0 0 30px;
 }
-div#container > div#side-right > div.container > div#postContent > ul.sitemap > li > a {
+div#side-right > div.container > div#postContent > ul.sitemap > li > a {
   text-decoration: none;
   color: #37135c;
   display: block;
@@ -317,34 +317,34 @@ div#container > div#side-right > div.container > div#postContent > ul.sitemap > 
   border: solid 1px #b8bbe0;
   line-height: 2.0;
 }
-div#container > div#side-right > div.container > div#postContent > ul.sitemap > li > a:hover {
+div#side-right > div.container > div#postContent > ul.sitemap > li > a:hover {
   background: #d5d9fd;
 }
-div#container > div#side-right > div.container > div#postContent h3 {
+div#side-right > div.container > div#postContent h3 {
 	border-bottom: solid 1px #4e55b1;
 	border-left: solid 4px #4e55b1;
 	padding-left: 5px;
 	margin: 15px 0 10px;
 }
-div#container > div#side-right > div.container > div#postContent table {
+div#side-right > div.container > div#postContent table {
   border-collapse: collapse;
   min-width: 600px;
 }
-div#container > div#side-right > div.container > div#postContent table tr {
+div#side-right > div.container > div#postContent table tr {
   line-height: 2.0;
 }
-div#container > div#side-right > div.container > div#postContent table tr > th {
+div#side-right > div.container > div#postContent table tr > th {
   background: #d0d1ea;
 }
-div#container > div#side-right > div.container > div#postContent table tr > td {
+div#side-right > div.container > div#postContent table tr > td {
   border-bottom: solid 1px silver;
 }
-div#container > div#side-right > div.container > div#postFooter {
+div#side-right > div.container > div#postFooter {
   margin: 30px 0 15px;
   border-top: solid 1px silver;
   padding: 10px 0 0;
 }
-div#container > div#side-right > div.container > div#postFooter > p {
+div#side-right > div.container > div#postFooter > p {
   font-size: 16px;
   color: #555;
   margin: 0;
@@ -368,11 +368,13 @@ div#container > br#floatReset {
   div#container {
     margin: 0;
   }
-  div#container > div#side-left {
+
+  /* Left Area */
+  div#side-left {
     width: 100%;
     float: none;
   }
-  div#container > div#side-left > div.title > label.btn {
+  div#side-left > div.title > label.btn {
     display: block;
     cursor: pointer;
     background: #f3f5ff;
@@ -384,7 +386,7 @@ div#container > br#floatReset {
     border-radius: 5px;
     border: solid 1px #4e55b1;
   }
-  div#container > div#side-left > div.menu {
+  div#side-left > div.menu {
     display: none;
     margin-bottom: 0;
     border-bottom: none;
@@ -393,48 +395,58 @@ div#container > br#floatReset {
     position: relative;
     text-align: center;
   }
-  div#container > div#side-left > div.search {
+  div#side-left > div.search {
     display: none;
     border-top: none;
     z-index: 5;
     position: relative;
     text-align: center;
   }
-  div#container > div#side-left > input#menuStatus:checked ~ div.menu,
-  div#container > div#side-left > input#menuStatus:checked ~ div.search {
-    display: block;
-  }
-  div#container > div#side-left > div.container > div  ul.menu {
-    border-bottom: solid 1px #ccc;
-  }
-  div#container > div#side-left > div.container > div  ul.menu > li {
-    display: inline-block;
-  }
-  div#container > div#side-left > div.container > div  ul.menu > li > a {
-    border-bottom: none;
-  }
-  div#container > div#side-left > div.container > div > ul.menu > li:nth-child(even),
-  div#container > div#side-left > div.container > div > ul.menu > li:nth-child(odd) {
-    background: #fff;
-  }
-  div#container > div#side-left > div.container > div > ul.mainNav > li  ul.menu {
+
+  /* Widget */
+  div#side-left > div.widget {
     display: none;
   }
-  div#container > div#side-right {
+
+  /* Menu */
+  div#side-left > input#menuStatus:checked ~ div.menu,
+  div#side-left > input#menuStatus:checked ~ div.search {
+    display: block;
+  }
+  div#side-left > div.container > div > ul.menu {
+    border-bottom: solid 1px #ccc;
+  }
+  div#side-left > div.container > div > ul.menu > li {
+    display: inline-block;
+  }
+  div#side-left > div.container > div > ul.menu > li > a {
+    border-bottom: none;
+  }
+  div#side-left > div.container > div > ul.menu > li:nth-child(even),
+  div#side-left > div.container > div > ul.menu > li:nth-child(odd) {
+    background: #fff;
+  }
+  div#side-left > div.container > div > ul.menu > li.current-menu-item > ul.sub-menu,
+  div#side-left > div.container > div > ul.menu > li.current-menu-parent > ul.sub-menu {
+    display: none !important;
+  }
+
+  /* Right Area */
+  div#side-right {
     width: 100%;
     float: none;
   }
-  div#container > div#side-right > div.container {
+  div#side-right > div.container {
     margin: 0;
     padding: 0 10px;
   }
-  div#container > div#side-right > div.container > ul.menu {
+  div#side-right > div.container > ul.menu {
     display: block;
     margin: 10px 0;
     Overflow: scroll;
     -webkit-overflow-scrolling: touch;
   }
-  div#container > div#side-right > div.container > ul.menu > li {
+  div#side-right > div.container > ul.menu > li {
     display: table-cell;
     table-layout: fixed;
     white-space: nowrap;
@@ -445,45 +457,49 @@ div#container > br#floatReset {
  * Mobile Area
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 @media screen and (max-width:630px) {
-  div#container > div#side-left > div.menu {
+
+  /* Left Area */
+  div#side-left > div.menu {
     text-align: left;
   }
-  div#container > div#side-left > div.container > h1 > a {
+  div#side-left > div.container > h1 > a {
     font-size: 25px;
   }
-  div#container > div#side-left > div.container > div  ul.menu {
+  div#side-left > div.container > div  ul.menu {
     border-bottom: none;
   }
-  div#container > div#side-left > div.container > div  ul.menu > li {
+  div#side-left > div.container > div  ul.menu > li {
     width: 50%;
     display: inline-block;
   }
-  div#container > div#side-left > div.container > div  ul.menu > li > a {
+  div#side-left > div.container > div  ul.menu > li > a {
     border-bottom: solid 1px #ccc;
   }
-  div#container > div#side-right > div.container > ul.menu > li > a > span {
+
+  /* Right Area */
+  div#side-right > div.container > ul.menu > li > a > span {
     font-size: 14px;
   }
-  div#container > div#side-right > div.container > div#postContent {
+  div#side-right > div.container > div#postContent {
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
   }
-  div#container > div#side-right > div.container > div#postContent > ul.updateList {
+  div#side-right > div.container > div#postContent > ul.updateList {
     padding: 0;
   }
-  div#container > div#side-right > div.container > div#postContent > ul.updateList > li > span {
+  div#side-right > div.container > div#postContent > ul.updateList > li > span {
     width: 110px;
   }
-  div#container > div#side-right > div.container > div#postContent > ul.menu > li {
+  div#side-right > div.container > div#postContent > ul.menu > li {
     width: 100%;
   }
-  div#container > div#side-right > div.container > div#postContent > ul.menu > li > a {
+  div#side-right > div.container > div#postContent > ul.menu > li > a {
     min-height: 10px;
   }
-  div#container > div#side-right > div.container > div#postContent > ul.menu > li > a > div {
+  div#side-right > div.container > div#postContent > ul.menu > li > a > div {
     display: none;
   }
-  div#container > div#side-right > div.container > div#postContent > ul.menu > li > a > span {
+  div#side-right > div.container > div#postContent > ul.menu > li > a > span {
     border-bottom: none;
     font-size: 18px;
   }
