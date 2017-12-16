@@ -11,7 +11,8 @@
 </head>
 <body>
 <?php if(is_admin_bar_showing()): ?>
-<style>div#container {
+<style>
+div#container {
   margin-top: 60px;
 }
 </style>

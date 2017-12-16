@@ -29,10 +29,10 @@ function get_child_list($argv) {
   $my_wp_query = new WP_Query();
   $all_wp_pages = $my_wp_query->query(array(
     'post_type' => 'page',
-    'nopaging'  => 'true'
+    'nopaging'  => 'false'
   ));
 
-  // Getting array of child-page
+  // Get array of child-page
   $child_pages = get_page_children( get_the_ID(), $all_wp_pages );
 
   // Not found child-pages
@@ -48,7 +48,7 @@ function get_child_list($argv) {
 
   foreach($child_pages as $child_page){
 
-    // Getting data of child-page
+    // Get data of child-page
     $child_page_id = $child_page->ID;
     $child_page_data = get_post($child_page_id);
     $child_page_title = $child_page_data->post_title;
