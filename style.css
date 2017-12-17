@@ -151,44 +151,6 @@ div#side-left > div.search > form > div > input[type="submit"] {
 }
 
 /*
- * Right Area
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-div#side-right {
-  width: 70%;
-  float: right;
-}
-div#side-right > div.container {
-  overflow: hidden;
-  background: #fff;
-  padding: 20px 30px 0;
-  margin: 0;
-  margin-left: 15px;
-  border: solid 1px #dbdbdb;
-  border-radius: 3px;
-  box-shadow: 0px 0px 5px #aaa;
-  border-top: solid 5px #4e55b1;
-}
-div#side-right > div.container > ul.menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: none;
-}
-div#side-right > div.container > ul.menu > li {
-  display: inline-block;
-}
-div#side-right > div.container > ul.menu > li > a {
-  border: solid 1px #acafda;
-  display: block;
-  padding: 5px 10px;
-  background: #e9eafb;
-  color: #2a2d5e;
-  text-decoration: none;
-  margin: 0 5px 5px 0;
-  line-height: 1.8;
-}
-
-/*
  * Left Area [Widget]
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 div#side-left > div.widget > h4.widgetTitle {
@@ -214,6 +176,43 @@ div#side-left > div.widget > div.calendar_wrap > table > tfoot {
   line-height: 1.5;
 }
 
+/*
+ * Right Area
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+div#side-right {
+  width: 70%;
+  float: right;
+}
+div#side-right > div.container {
+  overflow: hidden;
+  background: #fff;
+  padding: 20px 30px 0;
+  margin: 0;
+  margin-left: 15px;
+  border: solid 1px #dbdbdb;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px #aaa;
+  border-top: solid 5px #4e55b1;
+}
+div#side-right > div.container > ul.childList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+div#side-right > div.container > ul.childList > li {
+  display: inline-block;
+}
+div#side-right > div.container > ul.childList > li > a {
+  border: solid 1px #acafda;
+  display: block;
+  padding: 5px 10px;
+  background: #e9eafb;
+  color: #2a2d5e;
+  text-decoration: none;
+  margin: 0 5px 5px 0;
+  line-height: 1.8;
+}
 
 /*
  * Right Area [Post Header]
@@ -459,13 +458,13 @@ div#container > br#floatReset {
     margin: 0;
     padding: 0 10px;
   }
-  div#side-right > div.container > ul.menu {
+  div#side-right > div.container > ul.childList {
     display: block;
     margin: 10px 0;
     Overflow: scroll;
     -webkit-overflow-scrolling: touch;
   }
-  div#side-right > div.container > ul.menu > li {
+  div#side-right > div.container > ul.childList > li {
     display: table-cell;
     table-layout: fixed;
     white-space: nowrap;

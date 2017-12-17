@@ -8,17 +8,20 @@
 
     <?php elseif(!is_home()): /* ARCHIVE(AUTHOR, DATE, TAG, CATEGORY) */ ?>
     <h2 id="title"><?php the_archive_title(); ?></h2>
+
     <?php endif; ?>
   </div><!-- #postHeader -->
 
   <div id="postContent">
     <ul class="childList">
+
       <?php if(have_posts()): while (have_posts()): the_post(); ?>
       <li><a href="<?php the_permalink(); ?>">
         <span><?php the_title(); ?></span>
         <div><?php the_excerpt(); ?></div>
       </a></li>
       <?php endwhile; endif; ?>
+
     </ul>
     <div class="pageNavi">
       <span class="backPageNavi"><?php previous_posts_link(); ?></span>
@@ -46,60 +49,77 @@
 
   <?php if(have_posts()): while (have_posts()): the_post(); ?>
 
-    <?php if(is_page() && !is_attachment()): /* PAGE(exclude media) */ ?>
-    <ul class="childList">
-    <?php
+    <?php /* ***** ***** SUB-MENU ***** ***** */
 
-      // Get current page and parent page
-      $parent_page_id = $post->post_parent;
-      $current_page_id = get_the_ID();
+      if(is_page() && !is_attachment()){ /* PAGE(exclude media) */
 
-      // In the case of defined parent page
-      if($parent_page_id > 0){
+        // Get current page and parent page
+        $parent_page_id = $post->post_parent;
+        $current_page_id = get_the_ID();
 
-        // Create query
-        $my_wp_query = new WP_Query();
-        $all_wp_pages = $my_wp_query->query(array(
-          'post_type' => 'page',
-          'nopaging'  => 'false'
-        ));
+        // In the case of defined parent page
+        if($parent_page_id > 0){
 
-        // Get array of same-level-page
-        $same_level_pages = get_page_children( $parent_page_id, $all_wp_pages );
+          echo '<ul class="childList">';
 
-        foreach($same_level_pages as $same_level_page){
+          // Create query
+          $my_wp_query = new WP_Query();
+          $all_wp_pages = $my_wp_query->query(array(
+            'post_type' => 'page',
+            'nopaging'  => 'false'
+          ));
 
-          // Get data of same-level-page
-          $same_level_page_id = $same_level_page->ID;
-          $same_level_page_data = get_post($same_level_page_id);
+          // Get array of same-level-page
+          $same_level_pages = get_page_children( $parent_page_id, $all_wp_pages );
 
-          // Exclude current page
-          if($same_level_page_id == $current_page_id){
-            continue;
+          foreach($same_level_pages as $same_level_page){
+
+            // Get data of same-level-page
+            $same_level_page_id = $same_level_page->ID;
+            $same_level_page_data = get_post($same_level_page_id);
+
+            // Get same-level page
+            $same_level_page_title = $same_level_page_data->post_title;
+            $same_level_page_url = $same_level_page_data->guid;
+
+            if($same_level_page_id == $current_page_id){
+              echo '<li class="current-page">';
+            }else{
+              echo '<li>';
+            }
+
+            echo "<a href=\"$same_level_page_url\">$same_level_page_title</a></li>";
+
+          } // end of foreach
+
+          echo "</ul>";
+
+        } // end of if($parent_page > 0)
+
+      } elseif(is_single()) { /* POST */
+
+        $post_categories = get_the_category();
+        $post_category_id = $post_categories[0]->cat_ID;
+        $posts = get_posts("category=${post_category_id}&showposts=10");
+
+        if($posts){
+
+          echo '<ul class="childList">';
+
+          foreach($posts as $post){
+            setup_postdata($post);
+            $post_title = get_the_title();
+            $post_link = get_permalink();
+            echo "<li><a href=\"$post_link\">$post_title</a></li>";
           }
 
-          // Get same-level page
-          $same_level_page_title = $same_level_page_data->post_title;
-          $same_level_page_url = $same_level_page_data->guid;
+          echo '</ul>';
 
-          // var_dump($same_level_data);
-          echo "<li><a href=\"$same_level_page_url\">$same_level_page_title</a></li>";
         }
 
       }
 
     ?>
-    </ul>
-    <?php elseif(is_single()): /* POST */ ?>
-    <ul class="childList">
-    <?php
-
-      $category = get_the_category();
-      echo $category[0]->cat_name;
-
-    ?>
-    </ul>
-    <?php endif; ?>
 
     <div id="postHeader">
       <h2 id="title"><?php single_post_title(); ?></h2>
@@ -117,7 +137,7 @@
     <div id="postContent">
       <?php the_content(); ?>
       <div class="pageNavi">
-        <?php /* <!--nextpage--> */
+      <?php /* <!--nextpage--> */
         $argv = array(
           'before' => '<span class="backPageNavi">',
           'after' => '</span>',
