@@ -1,6 +1,5 @@
       <div id="postFooter">
-        <p><?php bloginfo('name'); ?><br>
-        &copy;2014 discription...</p>
+        <p><?php echo wpautop(get_option('tamakagi_options')); ?></p>
       </div><!-- #postFooter -->
     </div><!-- .container -->
   </div><!-- #side-right -->

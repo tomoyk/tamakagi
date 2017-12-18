@@ -75,4 +75,33 @@ EOF;
 
 add_shortcode('child_list', 'get_child_list');
 
+/*
+ * Enable theme-customizer(footer-text)
+ * * * * * * * * * * * * * * * * * * * * * * */
+function theme_customize_register($wp_custom){
+
+  // section
+  $wp_custom->add_section('tamakagi_original_scheme', array(
+    'title' => 'Footer Text',
+    'priority' => 200,
+  ));
+
+  // settings
+  $wp_custom->add_setting('tamakagi_options', array(
+    'default'   => 'Copyright ...',
+    'type'      => 'option',
+    'transport' => 'postMessage',
+  ));
+
+  $wp_custom->add_control('tamakagi_options_origin_text', array(
+    'settings'  => 'tamakagi_options', // settings
+    'label'     => 'フッターテキスト',
+    'section'   => 'tamakagi_original_scheme', // section
+    'type'      => 'textarea', // Form type(text,checkbox...)
+  ));
+
+}
+
+add_action('customize_register', 'theme_customize_register');
+
 ?>

@@ -24,25 +24,9 @@
 
     </ul>
     <div class="pageNavi">
-      <span class="backPageNavi"><?php previous_posts_link(); ?></span>
-      <span class="nextPageNavi"><?php next_posts_link(); ?></span>
+      <?php previous_posts_link(); ?>
+      <?php next_posts_link(); ?>
     </div>
-    <style>
-      div.pageNavi {
-        position: relative;
-      }
-      div.pageNavi > span {
-        position: absolute;
-        bottom: 0;
-        display: inline-block;
-      }
-      div.pageNavi > span.backPageNavi {
-        left: 0;
-      }
-      div.pageNavi > span.nextPageNavi {
-        right: 0;
-      }
-    </style>
   </div><!-- #postContent -->
 
 <?php else: /* POST or PAGE */ ?>
@@ -96,7 +80,7 @@
 
         } // end of if($parent_page > 0)
 
-      } elseif(is_single()) { /* POST */
+      } elseif(is_single() && !is_attachment()) { /* POST */
 
         $post_categories = get_the_category();
         $post_category_id = $post_categories[0]->cat_ID;
@@ -108,14 +92,14 @@
 
           foreach($posts as $post){
             setup_postdata($post);
-            $post_title = get_the_title();
+            $post_title = mb_substr(get_the_title(), 0, 10);
             $post_link = get_permalink();
             echo "<li><a href=\"$post_link\">$post_title</a></li>";
           }
 
           echo '</ul>';
 
-        }
+        } // end of if($posts)
 
       }
 
@@ -136,18 +120,16 @@
     </div><!-- #postHeader -->
     <div id="postContent">
       <?php the_content(); ?>
-      <div class="pageNavi">
       <?php /* <!--nextpage--> */
         $argv = array(
-          'before' => '<span class="backPageNavi">',
-          'after' => '</span>',
+          'before' => '<div class="pageNavi">',
+          'after' => '</div>',
           'next_or_number' => 'next',
-          'nextpagelink' => '次のページ',
-          'previouspagelink' => '前のページ',
+          'nextpagelink'     => __('Next page'),
+          'previouspagelink' => __('Previous page')
         );
         wp_link_pages($argv);
       ?>
-      </div>
     </div><!-- #postContent -->
 
   <?php endwhile; endif; ?>

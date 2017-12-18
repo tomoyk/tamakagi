@@ -318,6 +318,8 @@ div#side-right > div.container > div#postContent > ul.link > li > a {
 div#side-right > div.container > div#postContent > ul.link > li > a:hover {
   background: #d5d9fd;
 }
+
+
 div#side-right > div.container > div#postContent > ul.sitemap {
   list-style: none;
   padding: 0;
@@ -338,6 +340,8 @@ div#side-right > div.container > div#postContent > ul.sitemap > li > a {
 div#side-right > div.container > div#postContent > ul.sitemap > li > a:hover {
   background: #d5d9fd;
 }
+
+
 div#side-right > div.container > div#postContent h3 {
 	border-bottom: solid 1px #4e55b1;
 	border-left: solid 4px #4e55b1;
@@ -366,6 +370,19 @@ div#side-right > div.container > div#postFooter > p {
   font-size: 16px;
   color: #555;
   margin: 0;
+}
+
+/*
+ * Right Area [Page Navigation]
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+div#side-right > div.container > div#postContent > div.pageNavi {
+  display: block;
+  text-align: center;
+}
+div#side-right > div.container > div#postContent > div.pageNavi > a{
+  text-decoration: none;
+  color: #34518c;
+  border-bottom: dashed 1px #34518c;
 }
 
 /*
