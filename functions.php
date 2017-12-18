@@ -104,4 +104,73 @@ function theme_customize_register($wp_custom){
 
 add_action('customize_register', 'theme_customize_register');
 
+/*
+ * Enable getPageSubMenu()
+ * * * * * * * * * * * * * * * * * * * * * * */
+function getPageSubMenu($parent_page_id, $current_page_id){
+
+  // In the case of defined parent page
+  if($parent_page_id > 0){
+
+    echo '<ul class="childList">';
+
+    // Create query
+    $my_wp_query = new WP_Query();
+    $all_wp_pages = $my_wp_query->query(array(
+      'post_type' => 'page',
+      'nopaging'  => 'false'
+    ));
+
+    // Get array of same-level-page
+    $same_level_pages = get_page_children( $parent_page_id, $all_wp_pages );
+
+    foreach($same_level_pages as $same_level_page){
+
+      // Get data of same-level-page
+      $same_level_page_id = $same_level_page->ID;
+      $same_level_page_data = get_post($same_level_page_id);
+
+      // Get same-level page
+      $same_level_page_title = $same_level_page_data->post_title;
+      $same_level_page_url = $same_level_page_data->guid;
+
+      if($same_level_page_id == $current_page_id){
+        echo '<li class="current-page">';
+      }else{
+        echo '<li>';
+      }
+
+      echo "<a href=\"$same_level_page_url\">$same_level_page_title</a></li>";
+
+    } // end of foreach
+
+    echo "</ul>";
+
+  } // end of if($parent_page > 0)
+
+} // end of getPageSubMenu()
+
+function getPostSubMenu($category_id){
+
+  $posts = get_posts("category=${category_id}&showposts=10");
+
+  if($posts){
+
+    echo '<ul class="childList">';
+
+    foreach($posts as $post){
+      setup_postdata($post);
+      $post_title = mb_substr(get_the_title(), 0, 10);
+      $post_link = get_permalink();
+      echo "<li><a href=\"$post_link\">$post_title</a></li>";
+    }
+
+    echo '</ul>';
+
+  } // end of if($posts)
+
+} // end of
+
+
+
 ?>
