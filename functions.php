@@ -112,8 +112,6 @@ function getPageSubMenu($parent_page_id, $current_page_id){
   // In the case of defined parent page
   if($parent_page_id > 0){
 
-    echo '<ul class="childList">';
-
     // Create query
     $my_wp_query = new WP_Query();
     $all_wp_pages = $my_wp_query->query(array(
@@ -135,37 +133,39 @@ function getPageSubMenu($parent_page_id, $current_page_id){
       $same_level_page_url = $same_level_page_data->guid;
 
       if($same_level_page_id == $current_page_id){
-        echo '<li class="current-page">';
+        $list_html .= '<li class="current-page">';
       }else{
-        echo '<li>';
+        $list_html .= '<li>';
       }
 
-      echo "<a href=\"$same_level_page_url\">$same_level_page_title</a></li>";
+      $list_html .= "<a href=\"$same_level_page_url\">$same_level_page_title</a></li>";
 
     } // end of foreach
 
-    echo "</ul>";
+    echo '<ul class="childList">'.$list_html."</ul>";
 
   } // end of if($parent_page > 0)
 
 } // end of getPageSubMenu()
 
+/*
+ * Enable getPostSubMenu()
+ * * * * * * * * * * * * * * * * * * * * * * */
 function getPostSubMenu($category_id){
 
   $posts = get_posts("category=${category_id}&showposts=10");
 
   if($posts){
 
-    echo '<ul class="childList">';
-
     foreach($posts as $post){
+      // echo var_dump($post);
       setup_postdata($post);
-      $post_title = mb_substr(get_the_title(), 0, 10);
-      $post_link = get_permalink();
-      echo "<li><a href=\"$post_link\">$post_title</a></li>";
+      $post_title = mb_substr($post->post_title, 0, 15);
+      $post_link = $post->guid;
+      $list_html .= "<li><a href=\"$post_link\">$post_title</a></li>";
     }
 
-    echo '</ul>';
+    echo '<ul class="childList">'.$list_html.'</ul>';
 
   } // end of if($posts)
 
