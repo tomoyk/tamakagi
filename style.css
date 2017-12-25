@@ -348,6 +348,10 @@ div#side-right > div.container > div#postContent h3 {
 	padding-left: 5px;
 	margin: 15px 0 10px;
 }
+div#side-right > div.container > div#postContent img {
+  max-width: 100%;
+  height: auto;
+}
 div#side-right > div.container > div#postContent table {
   border-collapse: collapse;
   min-width: 600px;
