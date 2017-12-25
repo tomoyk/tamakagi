@@ -448,17 +448,17 @@ div#container > br#floatReset {
   div#side-left > input#menuStatus:checked ~ div.search {
     display: block;
   }
-  div#side-left > div.container > div > ul.menu {
+  div#side-left > div.container > div ul.menu {
     border-bottom: solid 1px #ccc;
   }
-  div#side-left > div.container > div > ul.menu > li {
+  div#side-left > div.container > div ul.menu > li {
     display: inline-block;
   }
-  div#side-left > div.container > div > ul.menu > li > a {
+  div#side-left > div.container > div ul.menu > li > a {
     border-bottom: none;
   }
-  div#side-left > div.container > div > ul.menu > li:nth-child(even),
-  div#side-left > div.container > div > ul.menu > li:nth-child(odd) {
+  div#side-left > div.container > div.menu-container ul.menu > li:nth-child(even),
+  div#side-left > div.container > div.menu-container ul.menu > li:nth-child(odd) {
     background: #fff;
   }
   div#side-left > div.container > div > ul.menu > li.current-menu-item > ul.sub-menu,
@@ -504,8 +504,9 @@ div#container > br#floatReset {
     border-bottom: none;
   }
   div#side-left > div.container > div  ul.menu > li {
-    width: 50%;
     display: inline-block;
+    float: left;
+    width: 50%;
   }
   div#side-left > div.container > div  ul.menu > li > a {
     border-bottom: solid 1px #ccc;
@@ -519,12 +520,21 @@ div#container > br#floatReset {
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
   }
-  div#side-right > div.container > div#postContent > ul.updateList {
+  div#side-right > div.container > div#postContent > ul.childList {
     padding: 0;
   }
-  div#side-right > div.container > div#postContent > ul.updateList > li > span {
-    width: 110px;
+  div#side-right > div.container > div#postContent > ul.childList > li {
+    width: 100%;
+    min-height: auto;
   }
+  div#side-right > div.container > div#postContent > ul.childList > li > a > span {
+    border-bottom: none;
+  }
+  div#side-right > div.container > div#postContent > ul.childList > li > a > div {
+    display: none;
+  }
+
+  /* Navigation Button */
   div#side-right > div.container > div#postContent > ul.menu > li {
     width: 100%;
   }
