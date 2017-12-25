@@ -80,12 +80,22 @@ add_shortcode('child_list', 'get_child_list');
  * * * * * * * * * * * * * * * * * * * * * * */
 function getUpdateList($args){
 
-  $parameter = shortcode_atts(array(
-    'category' => '',
+  // Get parameters
+  $args = shortcode_atts(array(
     'showposts' => 10,
   ), $args);
 
-  $posts = get_posts("category=".$parameter['category']."&showposts=".$parameter['showposts']);
+  // Build array
+  $get_options = array(
+    'showposts'   => $args['showposts'],
+    'post_type'   => array('post', 'page'),
+    'orderby'     => 'date',
+    'order'       => 'DESC',
+    'exclude'     => get_the_ID(),
+    'post_status' => 'publish',
+  );
+
+  $posts = get_posts($get_options);
 
   if($posts){
 
@@ -95,7 +105,7 @@ function getUpdateList($args){
       $post_title = mb_substr($post->post_title, 0, 15);
       $post_link = $post->guid;
       $post_date = mysql2date(get_option('date_format'), $post->post_date);
-      $list_html .= "<li><span>$post_date</span><a href=\"$post_link\">$post_title</a></li>";
+      $list_html .= "<li><span>$post_date</span><a href=\"$post_link\">$post_title</a>が更新されました.</li>";
     }
 
     return '<ul class="updateList">'.$list_html.'</ul>';

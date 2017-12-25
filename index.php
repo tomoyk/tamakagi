@@ -38,11 +38,9 @@
   <?php if(is_page() || is_single()): /* PAGE or POST */ ?>
   <ul id="postInfo">
     <li>更新日:<span><?php the_time(get_option('date_format')); ?></span></li>
-    <li>作者:<span><?php the_author_posts_link(); ?></span></li>
 
     <?php if(!is_attachment() && !is_page()): /* POST(exclude attachement) */ ?>
     <li>カテゴリ:<span><?php the_category(', '); ?></span></li>
-    <li>タグ:<span><?php the_tags(', '); ?></span></li>
     <?php endif; ?>
 
   </ul>
