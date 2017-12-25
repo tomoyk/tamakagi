@@ -302,11 +302,11 @@ div#side-right > div.container > div#postContent > ul.childList > li > a > div {
   font-size: 16px;
   margin: 10px 0;
 }
-div#side-right > div.container > div#postContent > ul.link {
+div#side-right > div.container > div#postContent > div.link > ul {
   list-style: none;
   padding: 0;
 }
-div#side-right > div.container > div#postContent > ul.link > li > a {
+div#side-right > div.container > div#postContent > div.link > ul > li > a {
   text-decoration: none;
   color: #37135c;
   display: block;
@@ -315,7 +315,7 @@ div#side-right > div.container > div#postContent > ul.link > li > a {
   margin: 10px 20px;
   border: solid 1px #b8bbe0;
 }
-div#side-right > div.container > div#postContent > ul.link > li > a:hover {
+div#side-right > div.container > div#postContent > div.link > ul > li > a:hover {
   background: #d5d9fd;
 }
 

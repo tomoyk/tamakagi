@@ -16,9 +16,9 @@ function left_widgets_init() {
 add_action( 'widgets_init', 'left_widgets_init' );
 
 /*
- * Enable short-tag
+ * Enable short-tag [child_list]
  * * * * * * * * * * * * * * * * * * * * * * */
-function get_child_list($argv) {
+function get_child_list() {
 
   // Check page
   if(!is_page()) {
@@ -74,6 +74,46 @@ EOF;
 } // end of get_child_list()
 
 add_shortcode('child_list', 'get_child_list');
+
+/*
+ * Enable short-tag [update_list]
+ * * * * * * * * * * * * * * * * * * * * * * */
+function getUpdateList($args){
+
+  $parameter = shortcode_atts(array(
+    'category' => '',
+    'showposts' => 10,
+  ), $args);
+
+  $posts = get_posts("category=".$parameter['category']."&showposts=".$parameter['showposts']);
+
+  if($posts){
+
+    foreach($posts as $post){
+      // echo var_dump($post);
+      setup_postdata($post);
+      $post_title = mb_substr($post->post_title, 0, 15);
+      $post_link = $post->guid;
+      $post_date = mysql2date(get_option('date_format'), $post->post_date);
+      $list_html .= "<li><span>$post_date</span><a href=\"$post_link\">$post_title</a></li>";
+    }
+
+    return '<ul class="updateList">'.$list_html.'</ul>';
+
+  } // end of if($posts)
+
+}
+
+add_shortcode('update_list', 'getUpdateList');
+
+/*
+ * Enable short-tag [site_link]
+ * * * * * * * * * * * * * * * * * * * * * * */
+function wrapSiteLink( $atts, $content = null ) {
+    return '<div class="link">' . $content . '</div>';
+}
+
+add_shortcode('site_link', 'wrapSiteLink');
 
 /*
  * Enable theme-customizer(footer-text)
@@ -170,7 +210,5 @@ function getPostSubMenu($category_id){
   } // end of if($posts)
 
 } // end of
-
-
 
 ?>
