@@ -54,8 +54,13 @@ function get_child_list() {
     $child_page_title = $child_page_data->post_title;
     $child_page_raw_content = $child_page_data->post_content;
 
-    // Modified HTML(remove html-tag and get substring of 55 characters)
-    $child_page_content = mb_substr(wp_strip_all_tags($child_page_raw_content, true), 0, 55);
+    // Modified HTML
+    // Remove html-tag
+    $child_page_simple_content = wp_strip_all_tags($child_page_raw_content, true);
+    // Remove shortcode [xxx]
+    $child_page_simple_content = preg_replace('/\[(\/|).+?\]/', '', $child_page_simple_content);
+    // Cut 55 characters
+    $child_page_content = mb_substr($child_page_simple_content, 0, 55);
     $child_page_url = $child_page_data->guid;
 
     // Build list-html
@@ -220,5 +225,18 @@ function getPostSubMenu($category_id){
   } // end of if($posts)
 
 } // end of
+
+
+/*
+ * Remove shortcode [xxx]
+ * * * * * * * * * * * * * * * * * * * * * */
+
+function remove_shortcode_list_element( $content ) {
+  //if ( !(is_single() || is_page() || is_attachment()) ) {
+    $content = strip_shortcodes( $content );
+  //}
+  return $content;
+}
+add_filter( 'the_excerpt', 'remove_shortcode_list_element' );
 
 ?>
