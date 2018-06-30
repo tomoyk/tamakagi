@@ -228,15 +228,11 @@ function getPostSubMenu($category_id){
 
 
 /*
- * Remove shortcode [xxx]
+ * Change the_excerpt cutted number of words
  * * * * * * * * * * * * * * * * * * * * * */
-
-function remove_shortcode_list_element( $content ) {
-  //if ( !(is_single() || is_page() || is_attachment()) ) {
-    $content = strip_shortcodes( $content );
-  //}
-  return $content;
-}
-add_filter( 'the_excerpt', 'remove_shortcode_list_element' );
+function custom_excerpt_length( $length ) {
+     return 55;	
+}	
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 ?>
