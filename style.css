@@ -320,14 +320,14 @@ div#side-right > div.container > div#postContent > div.link > ul > li > a:hover 
 }
 
 
-div#side-right > div.container > div#postContent > ul.sitemap {
+div#side-right > div.container > div#postContent > ul#sitemap_list {
   list-style: none;
   padding: 0;
 }
-div#side-right > div.container > div#postContent > ul.sitemap ul {
+div#side-right > div.container > div#postContent > ul#sitemap_list ul {
   padding: 0 0 0 30px;
 }
-div#side-right > div.container > div#postContent > ul.sitemap > li > a {
+div#side-right > div.container > div#postContent > ul#sitemap_list > li > a {
   text-decoration: none;
   color: #37135c;
   display: block;
@@ -337,7 +337,7 @@ div#side-right > div.container > div#postContent > ul.sitemap > li > a {
   border: solid 1px #b8bbe0;
   line-height: 2.0;
 }
-div#side-right > div.container > div#postContent > ul.sitemap > li > a:hover {
+div#side-right > div.container > div#postContent > ul#sitemap_list > li > a:hover {
   background: #d5d9fd;
 }
 
